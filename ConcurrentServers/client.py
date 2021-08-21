@@ -12,14 +12,14 @@ while True:
             s.connect((HOST, PORT))
             print(f'Connect to {HOST} on port {PORT}')
 
-            msg = 'hello there\n'
+            msg = 'client'
             s.send(msg.encode())
 
             data = s.recv(1024)
             data = data.decode()
 
             print(f'Data: {data} received')
-            sleep(5)
+            sleep(1)
 
         except KeyboardInterrupt:
             print('keyboard interrupt')
